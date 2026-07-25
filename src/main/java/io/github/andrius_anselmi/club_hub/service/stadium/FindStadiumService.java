@@ -1,7 +1,7 @@
-package io.github.andrius_anselmi.club_hub.service;
+package io.github.andrius_anselmi.club_hub.service.stadium;
 
-import io.github.andrius_anselmi.club_hub.Exception.StadiumNotFoundException;
 import io.github.andrius_anselmi.club_hub.entity.Stadium;
+import io.github.andrius_anselmi.club_hub.exception.ResourceNotFoundException;
 import io.github.andrius_anselmi.club_hub.repository.StadiumRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -19,7 +19,7 @@ public class FindStadiumService {
     }
 
     public Stadium findById(Long id){
-        return repository.findById(id).orElseThrow(() -> new StadiumNotFoundException("Stadium not found this is"));
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Stadium not found for id " + id));
         }
 
     }
