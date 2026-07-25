@@ -1,4 +1,4 @@
-package io.github.andrius_anselmi.club_hub.service;
+package io.github.andrius_anselmi.club_hub.service.stadium;
 
 import io.github.andrius_anselmi.club_hub.entity.Stadium;
 import io.github.andrius_anselmi.club_hub.repository.StadiumRepository;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class StadiumService {
+public class CreateStadiumService {
 
     private final StadiumRepository repository;
 
