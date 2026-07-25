@@ -1,6 +1,4 @@
-package io.github.andrius_anselmi.club_hub.Exception;
-
-
+package io.github.andrius_anselmi.club_hub.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,8 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(StadiumNotFoundException.class)
-    public ResponseEntity<String> handleStadiumNotFoundException(StadiumNotFoundException ex){
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<String> handleStadiumNotFoundException(ResourceNotFoundException ex){
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 }
