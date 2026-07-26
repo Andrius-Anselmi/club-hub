@@ -3,7 +3,6 @@ package io.github.andrius_anselmi.club_hub.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.net.Proxy;
 
 @Entity
 @Table
