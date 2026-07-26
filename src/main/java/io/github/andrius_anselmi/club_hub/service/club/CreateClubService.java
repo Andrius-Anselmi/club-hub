@@ -1,7 +1,6 @@
 package io.github.andrius_anselmi.club_hub.service.club;
 
 import io.github.andrius_anselmi.club_hub.entity.Club;
-import io.github.andrius_anselmi.club_hub.entity.Stadium;
 import io.github.andrius_anselmi.club_hub.repository.ClubRepository;
 import io.github.andrius_anselmi.club_hub.service.stadium.FindStadiumService;
 import lombok.RequiredArgsConstructor;

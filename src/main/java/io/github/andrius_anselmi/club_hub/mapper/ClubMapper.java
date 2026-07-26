@@ -1,6 +1,7 @@
 package io.github.andrius_anselmi.club_hub.mapper;
 
 import io.github.andrius_anselmi.club_hub.dto.request.ClubRequest;
+import io.github.andrius_anselmi.club_hub.dto.response.ClubBasicResponse;
 import io.github.andrius_anselmi.club_hub.dto.response.ClubDetailResponse;
 import io.github.andrius_anselmi.club_hub.dto.response.ClubResponse;
 import io.github.andrius_anselmi.club_hub.entity.Club;
@@ -16,4 +17,6 @@ public interface ClubMapper {
     ClubResponse toClubResponse(Club club);
 
     ClubDetailResponse toClubDetailResponse(Club club);
+
+    ClubBasicResponse toClubBasicResponse(Club club);
 }
