@@ -23,4 +23,6 @@ public class ClubRequest {
     private LocalDate founded;
 
     private Long stadiumId;
+
+    private Long clubId;
 }

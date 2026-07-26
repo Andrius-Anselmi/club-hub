@@ -3,9 +3,7 @@ package io.github.andrius_anselmi.club_hub.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.sql.Timestamp;
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @Entity
