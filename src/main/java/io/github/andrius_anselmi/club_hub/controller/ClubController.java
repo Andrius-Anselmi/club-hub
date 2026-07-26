@@ -6,6 +6,7 @@ import io.github.andrius_anselmi.club_hub.dto.response.ClubResponse;
 import io.github.andrius_anselmi.club_hub.mapper.ClubMapper;
 import io.github.andrius_anselmi.club_hub.service.club.CreateClubService;
 import io.github.andrius_anselmi.club_hub.service.club.FindClubService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -23,7 +24,7 @@ public class ClubController {
     private final ClubMapper clubMapper;
 
     @PostMapping()
-    public ResponseEntity<ClubDetailResponse> save(@RequestBody ClubRequest request){
+    public ResponseEntity<ClubDetailResponse> save(@Valid @RequestBody ClubRequest request){
         return ResponseEntity.status(HttpStatus.CREATED).body(clubMapper.toClubDetailResponse(createClubService.create(clubMapper.toClub(request))));
     }
 

@@ -6,6 +6,7 @@ import io.github.andrius_anselmi.club_hub.entity.Stadium;
 import io.github.andrius_anselmi.club_hub.mapper.StadiumMapper;
 import io.github.andrius_anselmi.club_hub.service.stadium.FindStadiumService;
 import io.github.andrius_anselmi.club_hub.service.stadium.CreateStadiumService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -24,7 +25,7 @@ public class StadiumController {
     private final StadiumMapper stadiumMapper;
 
     @PostMapping()
-    public ResponseEntity<StadiumResponse> create(@RequestBody StadiumRequest request){
+    public ResponseEntity<StadiumResponse> create(@Valid @RequestBody StadiumRequest request){
         return ResponseEntity.status(HttpStatus.CREATED).body(stadiumMapper.toStadiumResponse(createStadiumService.save(stadiumMapper.toStadium(request))));
     }
 
