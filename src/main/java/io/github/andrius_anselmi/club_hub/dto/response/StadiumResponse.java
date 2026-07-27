@@ -12,7 +12,7 @@ import lombok.Setter;
         "name",
         "city",
         "capacity",
-        "imgUrl"
+        "urlImg"
 })
 public class StadiumResponse{
 
