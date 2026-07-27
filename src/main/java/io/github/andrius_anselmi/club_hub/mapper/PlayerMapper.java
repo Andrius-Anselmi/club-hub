@@ -21,4 +21,6 @@ public interface PlayerMapper {
 
     PlayerDetailResponse toPlayerDetailResponse(Player player);
 
+    PlayerBasicResponse toPlayerBasicResponse(Player player);
+
 }

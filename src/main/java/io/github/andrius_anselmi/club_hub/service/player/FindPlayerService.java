@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class FindPlayerService {
@@ -15,12 +17,18 @@ public class FindPlayerService {
     private final PlayerRepository repository;
 
 
-    public Page<Player> findAll(Pageable pageable){
+
+    public Page<Player> findAll(Pageable pageable) {
         return repository.findAll(pageable);
     }
 
-    public Player findById(Long id){
-        return repository.findById(id).orElseThrow(()-> new ResourceNotFoundException("this not found " + id));
+    public Player findById(Long id) {
+        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("this not found " + id));
     }
+
+    public List<Player> findPlayersByClubById(Long id) {
+        return repository.findPlayerByClubId(id);
+    }
+
 
 }
